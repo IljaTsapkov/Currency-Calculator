@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-    let url = "currencyRates.xml";
+    let url = "currency-rates.xml";
     fetch(url)
     .then(response=>response.text())
     .then(data=>{
         let parser = new DOMParser();
         let xml = parser.parseFromString(data, "application/xml");
-        buildCubesList(xml, 'curFrom');
         buildCubesList(xml, 'curTo');
     });
 })
@@ -13,10 +12,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 function buildCubesList(x, currency){
     let list = document.getElementById(currency);
     let cubes = x.getElementsByTagName('Cube');
-    for(let i=0; i<cubes.length; i++){
+    for(let i=2; i<cubes.length; i++){
         let option = document.createElement('option');
         let cubeName = cubes[i].getAttribute('currency');
+        let cubeRate = cubes[i].getAttribute('rate');
         option.textContent = `${cubeName}`;
+        option.setAttribute('value',`${cubeRate}`)
         list.appendChild(option);
     }
 }
