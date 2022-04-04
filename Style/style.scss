@@ -1,7 +1,18 @@
 body {
-    background-color: #2E4053;
+    background-color: #35495e;
     font-family: 'Brush Script MT', cursive;
+    min-height: 100vh;
+    padding: 0 10px;
 }
+
+.wrapper{
+    width: 370px;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 7px;
+    background-color: #2E4053;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.05);
+  }
 
 label {
     color: crimson;
@@ -16,7 +27,6 @@ input {
     font-size: 40px;
     text-align: center;
 }
-
 #amount {
     width: 250px;
     background-color: #2E4053;
@@ -26,6 +36,15 @@ input {
     text-align: center;
 }
 
+p {
+    color: crimson;
+    font-size: 40px;
+}
+
+h1 {
+    color: crimson;
+    font-size: 50px;
+}
 
 #amount2 {
     width: 250px;
@@ -43,9 +62,44 @@ input {
     font-size: 40px;
 }
 
-select {
+/*select {
     background-color: #2E4053;
     font-family: 'Brush Script MT', cursive;
     color: crimson;
     font-size: 30px;
+}*/
+
+.drop-list .select-box{
+    display: flex;
+    width: 115px;
+    height: 45px;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    border: 1px solid #999;
+  }
+
+.select-box img{
+    max-width: 21px;
+}
+
+.select-box select{
+    width: auto;
+    font-size: 16px;
+    background: none;
+    margin: 0 -5px 0 5px;
+}
+
+.select-box select::-webkit-scrollbar{
+    width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+  .select-box select::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 8px;
+    border-right: 2px solid #ffffff;
 }
