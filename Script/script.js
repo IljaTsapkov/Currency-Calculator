@@ -22,14 +22,8 @@ function buildCubesList(x, currency){
     }
 }
 
-$( function() {
-    $( "#datepicker" ).datepicker();
-  } 
-);
-
 function myFunction() {
     var x = document.getElementById("curTo").value;
-    console.log(x)
     if (document.getElementById("amount")) {
         var c = document.getElementById("amount").value;
         var xc = x * c;
